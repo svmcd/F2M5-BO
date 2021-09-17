@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 
 body {
-    font-family: "Nunito", "Open Sans", Arial, Helvetica, sans-serif;
-    background: rgba(20, 58, 135, 0.8);
+    font-family: 'Poppins', sans-serif;
+    background: var(--black);
+    padding: 0;
+    margin: 0;
+}
+
+.frontpage {
+    height: 100vh;
 }
 
 main {
@@ -14,7 +19,7 @@ main {
 
 header {
     padding: 20px;
-    background: rgba(0, 13, 39);
+    background: var(--secondary);
     color: #fff;
 }
 
@@ -24,7 +29,7 @@ header h1 {
 
 nav {
     padding: 20px;
-    background: rgb(162, 184, 232);
+    background: var(--primary);
     color: #fff;
 }
 
@@ -45,22 +50,19 @@ nav ul li {
     display: block;
 }
 
-nav ul li a {
-    display: block;
-    padding: 5px 10px;
-    background: #000;
-    color: #fff;
-    text-decoration: none;
-}
 
 nav ul li .active, nav ul li a:hover {
     color: #000;
     background: #fff
 }
 
+.top-10 a {
+    color: white;
+}
+
 
 aside {
-    background: rgb(162, 184, 232);
+    background: var(--primary);
     min-height: 100px;
     padding: 20px;
 }
@@ -73,7 +75,7 @@ aside {
 footer {
     padding: 20px;
     color: #fff;
-    background: rgba(0, 13, 39);
+    background: var(--secondary);
 }
 
 @media screen and (min-width: 900px) {
