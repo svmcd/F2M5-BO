@@ -24,5 +24,12 @@ class WebsiteController {
 		$template_engine = get_template_engine();
 		echo $template_engine->render('registreer');
 	}
+
+	public function admin() {
+
+		$template_engine = get_template_engine();
+		echo $template_engine->render('admin');
+	}
+
 }
 

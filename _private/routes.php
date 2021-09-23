@@ -13,6 +13,7 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 
 	SimpleRouter::get( '/', 'WebsiteController@home' )->name( 'home' );
 	SimpleRouter::get( '/registreer', 'WebsiteController@registreer' )->name('registreer');
+	SimpleRouter::get( '/admin', 'WebsiteController@admin' )->name('admin');
 
 
 
