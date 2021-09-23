@@ -1,6 +1,6 @@
-**##Social responsibility**
+**Social responsibility**
 
-Amy Zijp, Samed Polat en Sem Thijssen
+Amber Zijp, Samed Polat en Sem Thijssen
 
 [Link naar index.md](docs/index.md)
  
