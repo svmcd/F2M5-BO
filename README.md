@@ -1,4 +1,4 @@
-**## Social responsibility**
+**##Social responsibility**
 
 Amy Zijp, Samed Polat en Sem Thijssen
 
