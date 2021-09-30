@@ -2,15 +2,23 @@
 @import "colors.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url("https://use.typekit.net/liu8efx.css");
 
-h1 {
-    margin: 0;
-    padding: 0;
+
+.width {
+    max-width: 1800px;
+    width: 1250px;
 }
 
-h2 {
+::selection {
+    background-color: #FE8D0D;
+}
+
+h1, h2, h3 {
     margin: 0;
     padding: 0;
+    font-family: poppins, sans-serif;
+    font-weight: 600;
 }
 
 p {
@@ -27,4 +35,24 @@ a {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    color: var(--primary);
+}
+
+a:hover {
+   color: var(--primary);
+}
+
+.cta-button {
+    background-color: var(--primary);
+    padding: .3em 2.5em;
+    border-radius: 20px;
+    color: var(--white);
+    border: var(--primary) 2px solid;
+}
+
+.cta-button:hover {
+    color: var(--primary);
+    background-color: var(--white);
+    text-decoration: none;
+    transition: .25s;
 }

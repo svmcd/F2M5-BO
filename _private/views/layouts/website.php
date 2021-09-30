@@ -7,16 +7,14 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo site_url( '/css/main.css' ) ?>" media="all">
+    <link rel="stylesheet" href="<?php echo site_url( '/css/registratie.css' ) ?>" media="all">
 	<?php if ( $this->section( 'css' ) ): ?>
 		<?php echo $this->section( 'css' ) ?>
 	<?php endif; ?>
 </head>
 <body>
 <div class="frontpage">
-    <header>
-        <h1>Social Responsibility</h1>
-    </header>
-    <nav>
+    <nav class="nav_container" >
 		<?php if ( $this->section( 'navigation' ) ): ?>
 			<?php echo $this->section( 'navigation' ) ?>
 		<?php else: ?>
@@ -24,12 +22,9 @@
 		<?php endif ?>
     </nav>
     <main>
-        <section class="content">
+        <section class="content width">
 			<?php echo $this->section( 'content' ) ?>
         </section>
-        <aside>
-			<?php echo $this->section( 'sidebar' ) ?>
-        </aside>
     </main>
     <footer>
         &copy; <?php echo date('Y')?>

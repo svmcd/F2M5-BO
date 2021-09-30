@@ -1,6 +1,6 @@
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: noto-sans, sans-serif;
     background: var(--black);
     padding: 0;
     margin: 0;
@@ -10,72 +10,39 @@ body {
     height: 100vh;
 }
 
+.nav_container {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     box-shadow: 5px 10px black; */
+    border-bottom: 3px rgba(0, 0, 0, 0.116) solid;
+    height: 8vh;
+}
+
 main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 20px;
-    background: #fff;
-}
-
-header {
-    padding: 20px;
-    background: var(--secondary);
-    color: #fff;
-}
-
-header h1 {
-    margin-bottom: 0;
-}
-
-nav {
-    padding: 20px;
-    background: var(--primary);
-    color: #fff;
+    background: var(--white);
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
-    background: #ffffff;
+    background: var(--white);
     min-height: 100px;
-    padding: 20px;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-}
-
-nav ul li {
-    display: block;
-}
-
-
-nav ul li .active, nav ul li a:hover {
-    color: #000;
-    background: #fff
-}
-
-.top-10 a {
-    color: white;
-}
-
-
-aside {
-    background: var(--primary);
-    min-height: 100px;
-    padding: 20px;
-}
-
-.top-10 ol {
-    margin: 0;
-    padding: 0 20px;
 }
 
 footer {
     padding: 20px;
     color: #fff;
     background: var(--secondary);
+}
+
+form div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 @media screen and (min-width: 900px) {

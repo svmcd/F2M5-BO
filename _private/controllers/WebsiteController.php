@@ -18,18 +18,5 @@ class WebsiteController {
 		echo $template_engine->render('homepage');
 
 	}
-
-	public function registreer() {
-
-		$template_engine = get_template_engine();
-		echo $template_engine->render('registreer');
-	}
-
-	public function admin() {
-
-		$template_engine = get_template_engine();
-		echo $template_engine->render('admin');
-	}
-
 }
 

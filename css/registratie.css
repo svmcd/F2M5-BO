@@ -1,0 +1,70 @@
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    height: 700px;
+}
+
+.registratie_box {
+    background-color: rgb(236, 236, 236);
+    height: 575px;
+    border-radius: 20px;
+    margin-left: -2em;
+    padding: 5em 3em 5em 3em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.registratie_box form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 200px;
+}
+
+.registratie_box h3 {
+    color: var(--secondary);
+}
+
+form input {
+    padding: .5em;
+    border-radius: 10px;
+    border-style: none;
+}
+
+.registratie_image {
+    height: 550px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .content {
+        height: 500px;
+    }
+
+    .registratie_image {
+        height: 400px;
+    }
+    .registratie_box {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content {
+        flex-direction: column;
+        padding: 5em;
+    }
+    .registratie_image {
+        height: 400px;
+    }
+    .registratie_box {
+        height: 400px;
+        margin: 0;
+        margin-top: -1em;
+    }
+
+}
