@@ -9,7 +9,7 @@
         <p>Voor jongeren (16-27 j.) die zich zelfverzekerd willen
  voelen en tegenslagen omzetten in kracht.</p>
     </div>
-    <form action="<?php echo url("registratie.verwerking")?>" method="post">
+    <form action="<?php echo url("registratie.verwerking")?>" method="POST">
     
         <input class="form_element" type="text" name="gebruikersnaam" value="" id="gebruikersnaam" placeholder="gebruikersnaam">
             
@@ -21,5 +21,7 @@
 
     </form>
 
-    <p>of log <a href="#">hier</a> in als je al een account hebt</p>
+    <p>of log <a href="<?php echo url( 'login.form' ) ?>"<?php if ( current_route_is( 'login.form' ) ): ?> <?php endif ?>>hier</a> in als je al een account hebt</p>
+    <!-- <p>of log <a href="#">hier</a> in als je al een account hebt</p> -->
 </div>
+

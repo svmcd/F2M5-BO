@@ -14,6 +14,8 @@
 </head>
 <body>
 <div class="frontpage">
+
+    <!-- laadt navbar in -->
     <nav class="nav_container" >
 		<?php if ( $this->section( 'navigation' ) ): ?>
 			<?php echo $this->section( 'navigation' ) ?>
@@ -21,14 +23,23 @@
 			<?php echo $this->fetch( '_navigation' ) ?>
 		<?php endif ?>
     </nav>
+
+    <!-- laadt content in -->
     <main>
         <section class="content width">
 			<?php echo $this->section( 'content' ) ?>
         </section>
     </main>
-    <footer>
-        &copy; <?php echo date('Y')?>
+
+    <!-- laadt footer in -->
+    <footer class="footer_container">
+        <?php if ($this->section( 'footer' ) ): ?>
+            <?php echo $this->section( 'footer' ) ?>
+        <?php else: ?>
+            <?php echo $this->fetch( '_footer' ) ?>
+        <?php endif ?>
     </footer>
+
 </div>
 <?php $this->start( 'javascript' ) ?>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

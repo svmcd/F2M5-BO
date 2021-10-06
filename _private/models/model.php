@@ -4,7 +4,7 @@
 
 function getUsers() {
 	$connection = dbConnect();
-	$sql        = "SELECT * FROM `users`";
+	$sql        = "SELECT * FROM `gebruikers`";
 	$statement  = $connection->query( $sql );
 
 	return $statement->fetchAll();
