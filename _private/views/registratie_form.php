@@ -1,7 +1,7 @@
 <?php $this->layout('layouts::website');?>
  
 <div>
-    <img class="registratie_image" src=<?php echo site_url('"/images/signup_image.png"');?> alt="image">
+    <img class="registratie_image" src="images/signup_image.png" alt="image">
 </div>
 <div class="registratie_box">
     <div>
@@ -11,11 +11,11 @@
     </div>
     <form action="<?php echo url("registratie.verwerking")?>" method="POST">
     
-        <input class="form_element" type="text" name="gebruikersnaam" value="" id="gebruikersnaam" placeholder="gebruikersnaam">
+        <input minlength="3" class="form_element" type="text" name="gebruikersnaam" value="" id="gebruikersnaam" placeholder="gebruikersnaam">
             
         <input class="form_element" type="email" name="email" value="" id="email" placeholder="email">
 
-        <input class="form_element" type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord">
+        <input minlength="6" class="form_element" type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord">
 
         <button class="form_element cta-button" type="submit">Registreren</button>
 

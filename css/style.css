@@ -20,6 +20,12 @@ body {
     height: 8vh;
 }
 
+.navbar_buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
 main {
     background: var(--white);
     height: 92vh;

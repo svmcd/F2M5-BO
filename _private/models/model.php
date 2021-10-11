@@ -9,3 +9,24 @@ function getUsers() {
 
 	return $statement->fetchAll();
 }
+
+/* function getPosts() {
+	$connection = dbConnect();
+	$sql        = "SELECT * FROM `posts`";
+	$statement  = $connection->query( $sql );
+
+	return $statement->fetchAll();
+} */
+
+function addUser($gebruikersnaam, $email, $wachtwoord) {
+	$connection = dbConnect();
+    $sql = "INSERT INTO `gebruikers` (`id`, `gebruikersnaam`, `email`, `wachtwoord`) VALUES (NULL, :gebruikersnaam, :email, :wachtwoord);";
+    $statement = $connection->prepare($sql);
+    $result = $statement->execute([
+        'gebruikersnaam' => $gebruikersnaam,
+        'email' => $email,
+        'wachtwoord' => $wachtwoord
+	]);
+	
+	return $result;
+}

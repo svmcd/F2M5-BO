@@ -4,3 +4,11 @@
     --white: #f4fafe;
     --black: #131313;
 }
+
+.blauw {
+    color: var(--secondary);
+}
+
+.orange {
+    color: var(--primary);
+}

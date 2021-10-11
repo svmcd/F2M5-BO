@@ -17,13 +17,15 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	SimpleRouter::get( '/login', 'LoginController@login_form' )->name('login.form');
 	SimpleRouter::get( '/admin', 'AdminController@admin' )->name('admin');
 
-	
+	SimpleRouter::get( '/test', 'TestController@testen' );
+
 
 	// STOP: Tot hier al je eigen URL's zetten, dit stukje laat de 4040 pagina zien als een route/url niet kan worden gevonden.
 	SimpleRouter::get( '/not-found', function () {
 		http_response_code( 404 );
 
-		return '404 Page not Found';
+		$template_engine = get_template_engine();
+        echo $template_engine->render('notfound');
 	} );
 
 } );

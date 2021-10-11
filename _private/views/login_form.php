@@ -5,20 +5,17 @@
 </div>
 <div class="registratie_box">
     <div>
-        <h3>Welkom 😊</h3>
+        <h3>Welkom</h3>
         <p>Voor jongeren (16-27 j.) die zich zelfverzekerd willen
  voelen en tegenslagen omzetten in kracht.</p>
     </div>
-    <form action="<?php echo url("registratie.verwerking")?>" method="POST">
+    <form action="<?php echo url("login.verwerking")?>" method="POST">
     
         <input class="form_element" type="text" name="gebruikersnaam" value="" id="gebruikersnaam" placeholder="gebruikersnaam">
         
         <input class="form_element" type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord">
-        
-        <p>klik <a href="<?php echo url( 'registratie.form' ) ?>"<?php if ( current_route_is( 'registratie.form' ) ): ?> <?php endif ?>>hier</a> als je je wachtwoord vergeten bent.</p>
 
-
-        <button class="form_element cta-button" type="submit">Inloggen</button>
+        <button class="form_element cta-button" type="submit">Login</button>
 
     </form>
 
