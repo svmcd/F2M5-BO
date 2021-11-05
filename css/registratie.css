@@ -1,13 +1,20 @@
 
 .content {
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registratie-container {
     display: flex;
     align-items: center;
     justify-content: center;    
-    height: 700px;
+    height: 84vh;
 }
 
 .registratie_box {
-    background-color: rgb(236, 236, 236);
+    background-color: var(--whitewhite);
     height: 575px;
     border-radius: 20px;
     margin-left: -2em;
@@ -33,6 +40,7 @@ form input {
     padding: .5em;
     border-radius: 10px;
     border-style: none;
+    background-color: rgb(243, 243, 243);
 }
 
 .registratie_image {
@@ -41,7 +49,7 @@ form input {
 }
 
 @media screen and (max-width: 1200px) {
-    .content {
+    .registratie-container {
         height: 500px;
     }
 
@@ -54,7 +62,7 @@ form input {
 }
 
 @media screen and (max-width: 800px) {
-    .content {
+    .registratie-container {
         flex-direction: column;
     }
     .registratie_image {

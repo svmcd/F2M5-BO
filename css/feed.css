@@ -1,0 +1,153 @@
+.feed_container {
+    margin: 3em 0em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post_container {
+    background-color: var(--whitewhite);
+    width: 550px;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.bovenbalk {
+    background-color: var(--purple);
+    height: 60px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    border-radius: 0 10px 0 0;
+}
+
+.bovenbalk div {
+    display: flex;
+}
+
+.post_gebruikersnaam {
+    color: var(--white);
+    margin-left: .5em;
+}
+
+.knopjes {
+    color: white;
+}
+
+.profielfoto {
+    height: 30px;
+    border-radius: 50%;
+}
+
+.post_afbeelding {
+    min-width: 500px;
+    max-width: 500px;
+}
+
+.onderbalk {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+
+.naam-beschrijving {
+    display: flex;
+}
+
+.onderbalk_gebruikersnaam {
+    font-weight: 800;
+    margin-right: .5em;
+}
+
+.comment-icon i {
+    font-size: 2em;
+}
+
+.sidebar_container {
+    display: flex;
+}
+
+.sidebar_button {
+    height: 10%;
+    background-color: var(--primary);
+    border: none;
+    color: var(--whitewhite);
+    border-radius: 30px 0px 0px 30px;
+    display: none;
+}
+
+.onderwerpen {
+    background-color: var(--whitewhite);
+    min-height: 400px;
+    width: 350px;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+.onderwerpen h2 {
+    color: vaR(--secondary);
+    margin-bottom: 1em;
+}
+
+.onderwerpen ul {
+    list-style: none;
+    padding: 0;
+}
+
+.onderwerpen ul li a {
+    color: var(--black);
+}
+
+.onderwerpen ul li a:hover {
+    color: var(--primary);
+}
+
+.post_balk {
+    background-color: var(--whitewhite);
+    margin-top: 1em;
+    padding: 1em 3em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.post_balk i {
+    font-size: 2em;
+    color: var(--primary);
+}
+
+.post_balk p {
+    margin-left: .5em;
+    color: var(--black);
+}
+
+.post_balk:hover {
+    text-decoration: none;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.037);
+}
+
+@media screen and (max-width: 1200px) {
+    .feed_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .feed_sidebar {
+        display: none;
+    }
+    .sidebar_button {
+        display: block;
+        position: absolute;
+        top: 25%;
+        right: 0;
+    }
+
+}

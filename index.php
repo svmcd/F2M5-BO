@@ -1,6 +1,7 @@
 <?php
 use Pecee\SimpleRouter\SimpleRouter;
 
+session_start();
 // Door deze regel heb je toegang tot alle software met composer is geïnstalleerd
 require_once './vendor/autoload.php';
 

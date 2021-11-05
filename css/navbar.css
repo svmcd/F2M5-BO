@@ -1,0 +1,63 @@
+.nav_container {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*     box-shadow: 5px 10px black; */
+    border-bottom: 3px rgba(0, 0, 0, 0.116) solid;
+    height: 8vh;
+}
+
+.navbar_buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav_profielfoto {
+    height: 40px;
+    border-radius: 50%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+}
+
+.dropdown_hover {
+    display: inline-block;
+    padding: 10px;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.dropdown_hover {
+    font-size: 1.5em;
+}
+
+.dropdown_menu {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: -150px;
+    min-width: 200px;
+    background-color: var(--whitewhite);
+    color: var(--black);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.037);
+}
+
+.dropdown:hover .dropdown_menu {
+    display: block;
+    padding: 1em;
+}
+
+.dropdown_menu a {
+    display: block;
+    color: var(--black);
+}

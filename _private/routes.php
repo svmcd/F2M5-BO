@@ -3,6 +3,7 @@
 use Pecee\Http\Request;
 use Pecee\SimpleRouter\Exceptions\NotFoundHttpException;
 use Pecee\SimpleRouter\SimpleRouter;
+use Website\Controllers\LoginController;
 
 SimpleRouter::setDefaultNamespace( 'Website\Controllers' );
 
@@ -12,13 +13,18 @@ SimpleRouter::group( [ 'prefix' => site_url() ], function () {
 	// Lees de docs, daar zie je hoe je routes kunt maken: https://github.com/skipperbent/simple-php-router#routes
 
 	SimpleRouter::get( '/', 'WebsiteController@home' )->name( 'home' );
+	SimpleRouter::get( '/gebruikers/{gebruikersnaam}', 'GebruikersController@gebruikers' )->name( 'gebruikers' );
 	SimpleRouter::get( '/registratie', 'RegistratieController@form' )->name('registratie.form');
 	SimpleRouter::post( '/registratie/verwerken', 'RegistratieController@verwerking')->name('registratie.verwerking');
+	SimpleRouter::get( '/delen', 'BerichtController@plaats_bericht' )->name('delen');
 	SimpleRouter::get( '/login', 'LoginController@login_form' )->name('login.form');
+	SimpleRouter::get( '/logout', 'LoginController@logout' )->name('logout');
+	SimpleRouter::post( '/login/verwerken', 'LoginController@handleLoginForm' )->name('login.handle');
+	SimpleRouter::get( '/feed', 'FeedController@feed' )->name('feed');
 	SimpleRouter::get( '/admin', 'AdminController@admin' )->name('admin');
 
 	SimpleRouter::get( '/test', 'TestController@testen' );
-
+	SimpleRouter::get('/ingelogd/dashboard', 'LoginController@userDashboard')->name('login.dashboard');
 
 	// STOP: Tot hier al je eigen URL's zetten, dit stukje laat de 4040 pagina zien als een route/url niet kan worden gevonden.
 	SimpleRouter::get( '/not-found', function () {

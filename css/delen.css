@@ -1,0 +1,61 @@
+
+.delen_container {
+    background-color: var(--whitewhite);
+    padding: 2.5em 7em;
+    margin: 1em;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.delen_container form div {
+    margin: 2em 1em;
+}
+
+.delen_container form button {
+    width: 90%;
+    height: 3em;
+}
+
+.delen_container form select {
+    border-radius: 20px;
+    background-color: var(--whitewhite);
+    border: 2px solid var(--primary);
+    height: 4em;
+    -webkit-appearance: borderless-attachment;
+    padding: 1em;
+}
+
+h1 {
+    color: var(--secondary);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+}
+
+#afbeelding {
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 20px;
+    height: 3em;
+}
+
+#beschrijving {
+    background-color: rgb(243, 243, 243);
+    border: none;
+    border-radius: 20px;
+    resize: none;
+    padding: 1em;
+}
+
+@media screen and (max-width: 800px) {
+    .delen_container {
+        padding: 2em 4em;
+    }
+}

@@ -6,29 +6,8 @@ body {
     margin: 0;
 }
 
-.frontpage {
-    height: 100vh;
-}
-
-.nav_container {
-    background-color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-/*     box-shadow: 5px 10px black; */
-    border-bottom: 3px rgba(0, 0, 0, 0.116) solid;
-    height: 8vh;
-}
-
-.navbar_buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 400px;
-}
-
 main {
     background: var(--white);
-    height: 92vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,13 +30,14 @@ form div {
     flex-direction: column;
 }
 
-@media screen and (min-width: 900px) {
-    main {
-        grid-template-columns: 1fr 350px;
-    }
+@media screen and (max-width: 900px) {
 
     nav ul li a {
         display: inline-block;
+    }
+
+    .navbar_buttons {
+        width: 300px;
     }
 
 }
