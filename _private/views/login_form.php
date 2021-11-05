@@ -9,12 +9,16 @@
         <p>Voor jongeren (16-27 j.) die zich zelfverzekerd willen
  voelen en tegenslagen omzetten in kracht.</p>
     </div>
-    <form action="<?php echo url("login.verwerking")?>" method="POST">
+    <form action="<?php echo url("login.handle")?>" method="POST">
     
-        <input class="form_element" type="text" name="gebruikersnaam" value="" id="gebruikersnaam" placeholder="gebruikersnaam">
-        
+        <input class="form_element" type="text" name="gebruikersnaam" value="<?php echo input('gebruikersnaam')?>" id="gebruikersnaam" placeholder="gebruikersnaam">
+        <?php if ( isset($errors['gebruikersnaam'])): ?>
+    <?php echo $errors['gebruikersnaam']?>
+<?php endif; ?>
         <input class="form_element" type="password" name="wachtwoord" id="wachtwoord" placeholder="wachtwoord">
-
+<?php if ( isset($errors['wachtwoord'])): ?>
+    <?php echo $errors['wachtwoord']?>
+<?php endif; ?>
         <button class="form_element cta-button" type="submit">Login</button>
 
     </form>

@@ -1,7 +1,7 @@
 <?php $this->layout('layouts::website');?>
  
 <div>
-    <img class="registratie_image" src="images/signup_image.png" alt="image">
+    <img class="registratie_image" src="/images/signup_image.png" alt="image">
 </div>
 <div class="registratie_box">
     <div>
