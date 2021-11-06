@@ -4,10 +4,13 @@
 
 <div class="delen_container" >
     <h1>Plaats een bericht</h1>
-    <form action="">
+    <form action="<?php echo url('bericht.opslaan') ?>" method="POST" enctype="multipart/form-data">
         <div>
             <label for="afbeelding">Kies afbeelding</label>
             <input id="afbeelding" name="afbeelding" type="file">
+            <?php if (isset($errors['afbeelding'])): ?>
+                <?php echo $errors['upload'] ?>
+            <?php endif; ?>
         </div>
         <div>
             <label for="onderwerp">Onderwerp</label>

@@ -4,22 +4,26 @@
 <script src="<?php echo site_url( '/js/javascript.js' ) ?>"></script>
 
 <div class="feed_container">
-    <div class="post_container">
-        <div class="bovenbalk">
-            <div>
-                <img class="profielfoto" src="<?php echo site_url( '/images/default_pfp.jpg' ) ?>" alt="">
-                <p class="post_gebruikersnaam" >gebruiker123</p>
+    <div class="posts_container">  
+        <?php foreach($posts as $bericht): ?>
+        <div class="post_container">
+            <div class="bovenbalk">
+                <div>
+                    <a href="<?php echo site_url('/gebruikers/'. $bericht['gebruiker'])?>"><img class="profielfoto" src="<?php echo site_url( '/images/default_pfp.jpg' ) ?>" alt=""></a>
+                    <a href="<?php echo site_url('/gebruikers/'. $bericht['gebruiker'])?>"><p class="post_gebruikersnaam" ><?php echo $bericht['gebruiker'] ?></p></a>
+                </div>
+                <div class="knopjes" ><i class="fas fa-ellipsis-h"></i></div>
             </div>
-            <div class="knopjes" ><i class="fas fa-ellipsis-h"></i></div>
-        </div>
-        <img class="post_afbeelding" src="<?php echo site_url('/images/voorbeeldfoto.png') ?>" alt="">
-        <div class="onderbalk">
-            <div class="naam-beschrijving">
-                <p class="onderbalk_gebruikersnaam" >gebruiker123</p>
-                <p class="onderbalk_beschrijving" >Welkom bij de Transformers Community</p>
+            <img class="post_afbeelding" src="<?php echo site_url('/uploads'. $bericht['bestandsnaam'])?>">
+            <div class="onderbalk">
+                <div class="naam-beschrijving">
+                    <p class="onderbalk_gebruikersnaam" ><?php echo $bericht['gebruiker'] ?></p>
+                    <p class="onderbalk_beschrijving" ><?php echo $bericht['beschrijving'] ?></p>
+                </div>
+                <div class="comment-icon"><i class="far fa-comment"></i></div>
             </div>
-            <div class="comment-icon"><i class="far fa-comment"></i></div>
         </div>
+        <?php endforeach; ?>
     </div>
     <div class="sidebar_container">
         <button onclick="openSidebar" class="sidebar_button"><i class="fas fa-chevron-left"></i></button>

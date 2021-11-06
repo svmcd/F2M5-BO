@@ -148,3 +148,30 @@ function loginCheck(){
 		redirect( $login_url );
 }
 }
+
+function validateBerichtData($data, Pecee\Http\Input\InputFile $afbeelding)
+{
+	$errors = [];
+
+	$onderwerp	= trim($data["onderwerp"]);
+	$beschrijving	= trim($data["beschrijving"]);
+
+	if($afbeelding->hasError()){
+		$errors['afbeelding'] = 'Oeps, je bent vergeten om een afbeelding te kiezen!';
+	}else{
+		if($afbeelding->getMime() !== 'image/jpeg' && $afbeelding->getMime() !== 'image/jpg'  && $afbeelding->getMime() !== 'image/png' ){
+			$errors['afbeelding'] = 'Oeps, je mag alleen PNG of JPEG type bestanden uploaden';
+		}
+	}
+
+	$data = [
+		'onderwerp' => $onderwerp,
+		'beschrijving' => $beschrijving,
+		'afbeelding' => $afbeelding
+	];
+
+	return [
+		'data' => $data,
+		'errors' => $errors
+	];
+}

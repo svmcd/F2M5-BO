@@ -62,8 +62,8 @@ class RegistratieController {
 
                 ];
                 $statement->execute($params);
-                echo "klaar";
-                exit;
+                redirect(url('login.form'));
+
                 
             }else {
                 //anders foutmelding tonen

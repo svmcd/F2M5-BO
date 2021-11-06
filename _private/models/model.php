@@ -78,3 +78,45 @@ function getUserByGebruikersnaam($gebruikersnaam)
 
 	return false;
 }
+
+function getAllPosts()
+{
+	$connection = dbConnect();
+	$sql = "SELECT `posts`.*, `afbeeldingen`.`bestandsnaam` 
+	FROM `posts` 
+	LEFT JOIN `afbeeldingen` 
+	ON `afbeeldingen`.`id` = `posts`.`afbeelding_id`
+	ORDER BY `posts`.`onderwerp` ASC";
+	
+	$statement = $connection->query($sql);
+
+	return $statement->fetchAll();
+}
+
+function maakAfbeelding($newBestandsnaam, $orgBestandsnaam)
+{
+	$connection = dbConnect();
+	$sql = "INSERT INTO `afbeeldingen` (`bestandsnaam`,`originele_bestandsnaam`) VALUES (:bestandsnaam, :originele_bestandsnaam)";
+	$statement = $connection->prepare($sql);
+	$params = [
+		'bestandsnaam' => $newBestandsnaam,
+		'originele_bestandsnaam' => $orgBestandsnaam
+	];
+	$statement->execute($params);
+
+	return $connection->lastInsertId();
+}
+
+function maakBericht($onderwerp, $beschrijving, $afbeelding_id, $gebruiker)
+{
+	$connection = dbConnect();
+	$sql = "INSERT INTO `posts` (`onderwerp`,`beschrijving`, `afbeelding_id`, `gebruiker`) VALUES (:onderwerp, :beschrijving, :afbeelding_id, :gebruiker)";
+	$statement = $connection->prepare($sql);
+	$params = [
+		'onderwerp' => $onderwerp,
+		'beschrijving' => $beschrijving,
+		'afbeelding_id' => $afbeelding_id,
+		'gebruiker' => $gebruiker
+	];
+	$statement->execute($params);
+}

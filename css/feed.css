@@ -5,6 +5,11 @@
     justify-content: space-between;
 }
 
+.posts_container {
+    display: flex;
+    flex-direction: column;
+}
+
 .post_container {
     background-color: var(--whitewhite);
     width: 550px;
@@ -14,6 +19,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
+    margin-top: 2em;
 }
 
 .bovenbalk {
