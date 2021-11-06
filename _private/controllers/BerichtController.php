@@ -25,7 +25,7 @@ public function opslaan_bericht() {
 
         $newBestandsnaam = sha1_file($tmpBestandsnaam) . '.' . $orgBestandstype;
          
-        $destinatiePad = get_config('PUBLIC'). '/uploads' . $newBestandsnaam;
+        $destinatiePad = get_config('PUBLIC'). '/uploads/' . $newBestandsnaam;
         $afbeelding->move($destinatiePad);
 
         $afbeelding_id = maakAfbeelding($newBestandsnaam, $orgBestandsnaam);
