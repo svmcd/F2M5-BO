@@ -1,5 +1,8 @@
 <?php $this->layout('layouts::website');?>
 
+<title>Gebruiker</title>
+
+
 <div class="gebruiker_container" >
     <div class="profiel_box" >
         <div class="profielfoto"><img src="../images/default_pfp.jpg"></div>

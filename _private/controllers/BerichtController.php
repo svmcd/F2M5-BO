@@ -25,12 +25,12 @@ public function opslaan_bericht() {
 
         $newBestandsnaam = sha1_file($tmpBestandsnaam) . '.' . $orgBestandstype;
          
-        $destinatiePad = get_config('PUBLIC'). '/uploads/' . $newBestandsnaam;
+        $destinatiePad = get_config('PUBLIC'). '/uploads' . $newBestandsnaam;
         $afbeelding->move($destinatiePad);
 
         $afbeelding_id = maakAfbeelding($newBestandsnaam, $orgBestandsnaam);
 
-        $gebruiker = get_current_user();
+        $gebruiker = getLoggedInUserName();
 
         maakBericht($result['data']['onderwerp'], $result['data']['beschrijving'], $afbeelding_id, $gebruiker);
         

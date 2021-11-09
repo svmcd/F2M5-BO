@@ -52,6 +52,10 @@
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.037);
 }
 
+.dropdown i {
+    color: var(--secondary);
+}
+
 .dropdown:hover .dropdown_menu {
     display: block;
     padding: 1em;

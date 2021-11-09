@@ -16,3 +16,5 @@
 
 # Ook onze gevoelige gegevens (usernames, passwords e.d.) NOOIT in Git
 /_private/includes/config.php
+
+uploads

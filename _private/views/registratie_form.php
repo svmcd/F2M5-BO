@@ -1,6 +1,8 @@
 <?php $this->layout('layouts::website');?>
 <link rel="stylesheet" href="<?php echo site_url( '/css/registratie.css' ) ?>" media="all">
 
+<title>registreren</title>
+
 <div class="registratie-container">
     <div>
         <img class="registratie_image" src="<?php echo site_url( '/images/signup_image.png' ) ?>" alt="image">
@@ -23,7 +25,7 @@
 
         </form>
 
-        <p>of log <a href="<?php echo url( 'login.form' ) ?>"<?php if ( current_route_is( 'login.form' ) ): ?> <?php endif ?>>hier</a> in als je al een account hebt</p>
+        <p>Of log <a class="registratie_box_link" href="<?php echo url( 'login.form' ) ?>"<?php if ( current_route_is( 'login.form' ) ): ?> <?php endif ?>>hier</a> in als je al een account hebt</p>
         <!-- <p>of log <a href="#">hier</a> in als je al een account hebt</p> -->
     </div>
 </div>

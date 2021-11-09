@@ -1,5 +1,5 @@
 .feed_container {
-    margin: 3em 0em;
+    margin: 5em 0em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,11 +19,11 @@
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
-    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .bovenbalk {
-    background-color: var(--purple);
+    background-color: var(--secondary);
     height: 60px;
     width: 500px;
     display: flex;
@@ -37,13 +37,32 @@
     display: flex;
 }
 
+.bovenbalk div a {
+    text-decoration: none;
+}
+
+.naam-onderwerp {
+    display: flex;
+    flex-direction: column;
+    margin-left: .5em;
+    line-height: 1.2;
+}
+
 .post_gebruikersnaam {
     color: var(--white);
-    margin-left: .5em;
+    text-decoration: none;
+}
+
+.post_onderwerp {
+    color: var(--white);
+    opacity: .5;
+    font-size: .70em;
+    text-transform: capitalize;
 }
 
 .knopjes {
     color: white;
+    cursor: pointer;
 }
 
 .profielfoto {
@@ -60,21 +79,27 @@
     width: 500px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 40px;
+    height: 10px;
+    margin-top: .5em;
 }
 
 .naam-beschrijving {
     display: flex;
 }
 
+.naam-beschrijving a {
+    text-decoration: none;
+}
+
 .onderbalk_gebruikersnaam {
     font-weight: 800;
     margin-right: .5em;
+    color: var(--black);
 }
 
 .comment-icon i {
-    font-size: 2em;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
 .sidebar_container {

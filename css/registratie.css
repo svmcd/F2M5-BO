@@ -32,12 +32,16 @@
     height: 200px;
 }
 
+.registratie_box_link {
+    color: var(--primary);
+}
+
 .registratie_box h3 {
     color: var(--secondary);
 }
 
 form input {
-    padding: .5em;
+    padding: .5em 1em;
     border-radius: 10px;
     border-style: none;
     background-color: rgb(243, 243, 243);

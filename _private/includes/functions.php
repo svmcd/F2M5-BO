@@ -149,6 +149,23 @@ function loginCheck(){
 }
 }
 
+function getLoggedInUserName() {
+	$gebruikersnaam = "Niet ingelogd.";
+
+	if(!isLoggedIn()){
+		return $gebruikersnaam;
+	}
+
+	$gebruiker_id = $_SESSION['user_id'];
+	$gebruiker = getUserById($gebruiker_id);
+
+	if($gebruiker){
+		$gebruikersnaam = $gebruiker['gebruikersnaam'];
+	}
+
+	return $gebruikersnaam;
+}
+
 function validateBerichtData($data, Pecee\Http\Input\InputFile $afbeelding)
 {
 	$errors = [];

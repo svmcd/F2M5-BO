@@ -35,8 +35,8 @@ a {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: var(--primary);
-}
+/*     color: var(--primary);
+ */}
 
 a:hover {
    color: var(--primary);

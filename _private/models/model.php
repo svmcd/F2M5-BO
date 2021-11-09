@@ -79,6 +79,48 @@ function getUserByGebruikersnaam($gebruikersnaam)
 	return false;
 }
 
+function getUserByEmail($email)
+{
+	$connection = dbConnect();
+	$sql = "SELECT * FROM `gebruikers` WHERE email =  :email";
+	$statement = $connection->prepare($sql);
+	$result = $statement->execute(['email' => $email]);
+
+	if ($statement->rowCount() === 1) {
+		return $statement->fetch();
+	}
+
+	return false;
+}
+
+function getUserById($id)
+{
+	$connection = dbConnect();
+	$sql = "SELECT * FROM `gebruikers` WHERE id =  :id";
+	$statement = $connection->prepare($sql);
+	$result = $statement->execute(['id' => $id]);
+
+	if ($statement->rowCount() === 1) {
+		return $statement->fetch();
+	}
+
+	return false;
+}
+
+function getPostByUser($gebruiker)
+{
+	$connection = dbConnect();
+	$sql = "SELECT * FROM `gebruikers` WHERE gebruiker =  :gebruiker";
+	$statement = $connection->prepare($sql);
+	$result = $statement->execute(['gebruiker' => $gebruiker]);
+
+	if ($statement->rowCount() === 1) {
+		return $statement->fetch();
+	}
+
+	return false;
+}
+
 function getAllPosts()
 {
 	$connection = dbConnect();
@@ -109,6 +151,9 @@ function maakAfbeelding($newBestandsnaam, $orgBestandsnaam)
 
 function maakBericht($onderwerp, $beschrijving, $afbeelding_id, $gebruiker)
 {
+
+	$gebruiker = getLoggedInUserName();
+
 	$connection = dbConnect();
 	$sql = "INSERT INTO `posts` (`onderwerp`,`beschrijving`, `afbeelding_id`, `gebruiker`) VALUES (:onderwerp, :beschrijving, :afbeelding_id, :gebruiker)";
 	$statement = $connection->prepare($sql);

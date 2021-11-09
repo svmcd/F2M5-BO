@@ -11,7 +11,7 @@ $gebruiker = get_current_user();
         <div class="dropdown">
             <div class="dropdown_hover"><i class="fas fa-ellipsis-v"></i></div>
             <div class="dropdown_menu">
-                <a href="<?php echo site_url('/gebruikers/'. $gebruiker)?>">Account</a>
+                <a href="<?php echo site_url('/gebruikers/'. getLoggedInUserName())?>">Account</a>
                 <a href="<?php echo url( 'logout' ) ?>">Loguit</a>
             </div>
         </div>
@@ -22,6 +22,6 @@ $gebruiker = get_current_user();
         <div><a href="<?php echo url( 'home' ) ?>"<?php if ( current_route_is( 'home' ) ): ?> <?php endif ?>><img src="<?php echo site_url( '/images/TC_logo.png' ) ?>" alt="logo"></a></div>
         <div class="navbar_buttons" > 
             <div><a class="cta-button" href="<?php echo url( 'registratie.form' ) ?>"<?php if ( current_route_is( 'registratie.form' ) ): ?> <?php endif ?>>Registreer</a></div>
-            <div><a class="cta-button" href="<?php echo url( 'login.form' ) ?>"<?php if ( current_route_is( 'login.form' ) ): ?> <?php endif ?>>login</a></div>
+            <div><a class="cta-button" href="<?php echo url( 'login.form' ) ?>"<?php if ( current_route_is( 'login.form' ) ): ?> <?php endif ?>>Login</a></div>
         </div>
     <?php endif;?> 

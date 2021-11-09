@@ -1,7 +1,10 @@
 <?php $this->layout('layouts::website');?>
 
+<title>Delen</title>
+
 <link rel="stylesheet" href="<?php echo site_url( '/css/delen.css' ) ?>" media="all">
 
+<?php if(isLoggedIn()): ?>
 <div class="delen_container" >
     <h1>Plaats een bericht</h1>
     <form action="<?php echo url('bericht.opslaan') ?>" method="POST" enctype="multipart/form-data">
@@ -29,3 +32,9 @@
         <button class="cta-button" type="submit">Plaats bericht</button>
     </form>
 </div>
+<?php else: ?>
+    <?php 
+    header('Location: registratie.form', true, 301); 
+    exit();
+    ?>
+<?php endif; ?>
